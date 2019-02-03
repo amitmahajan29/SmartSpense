@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="acer.example.com.smartspense.AddExpense"
+    tools:showIn="@layout/app_bar_add_expense"
+    android:theme="@style/AppTheme.NoActionBar"
+    android:background="@drawable/grad"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:hint="Item Name"
+        android:inputType="textAutoCorrect"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="20dp"
+        android:textColorHint="@android:color/background_light"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:textColorHint="@android:color/background_light"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="@android:color/background_light"
+        android:paddingRight="20dp"
+        android:autofillHints="Select Category"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <EditText
+        android:id="@+id/price"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColorHint="@android:color/background_light"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:textColor="@android:color/background_light"
+        android:paddingRight="20dp"
+        android:inputType="number"
+        android:hint="Price"/>
+
+    <Spinner
+        android:id="@+id/paymentMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/background_light"
+        android:background="@drawable/grad"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:textColorHint="@android:color/background_light"
+        android:paddingRight="20dp"
+        android:autofillHints="Select Category"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColorHint="@android:color/background_light"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        android:paddingRight="20dp"
+        android:focusable="false"
+        android:hint="Date of Expenditure" />
+
+    <EditText
+        android:id="@+id/extraDescription"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:textColorHint="@android:color/background_light"
+        android:textColor="@android:color/background_light"
+        android:paddingLeft="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:inputType="textAutoCorrect"
+        android:hint="Add a note?"/>
+
+    <Button
+        android:id="@+id/btnAddExpense"
+        android:layout_width="match_parent"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textColorHint="@android:color/background_light"
+        android:textStyle="bold"
+        android:paddingBottom="20dp"
+        android:layout_height="wrap_content"
+        android:text="Add Expense" />
+
+</LinearLayout>

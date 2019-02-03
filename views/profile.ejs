@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title></title>
+<link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style type="text/css">
+	body{
+		font-family: 'Varela Round', sans-serif;
+	}
+	.form-control {
+		box-shadow: none;		
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.font-poppins {
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+	.form-control:focus {
+		border-color: #33cabb;
+		box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	}
+	.navbar-header.col {
+		padding: 0 !important;
+	}	
+	.navbar {
+		background: #000;
+		padding-left: 16px;
+		padding-right: 16px;
+		border-bottom: 1px solid #dfe3e8;
+		border-radius: 0;
+	}
+	.nav-link img {
+		border-radius: 50%;
+		width: 36px;
+		height: 36px;
+		margin: -8px 0;
+		float: left;
+		margin-right: 10px;
+	}
+	.navbar .navbar-brand, .navbar .navbar-brand:hover, .navbar .navbar-brand:focus {
+		padding-left: 0;
+		font-size: 20px;
+		padding-right: 50px;
+	}
+	.navbar .navbar-brand b {
+		font-weight: bold;
+		color: #33cabb;		
+	}
+	.navbar .form-inline {
+        display: inline-block;
+    }
+	.navbar .nav li {
+		position: relative;
+	}
+	.navbar .nav li a {
+		color: #888;
+	}
+
+	.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+		color: #tomato;
+		background: #tomato;
+		padding-top: 8px;
+		padding-bottom: 6px;
+		vertical-align: middle;
+		border: none;
+	}	
+	.navbar .nav .btn-primary:hover, .navbar .nav .btn-primary:focus {		
+		color: #fff;
+		outline: none;
+		background: tomato;
+	}
+	.navbar .navbar-right li:first-child a {
+		padding-right: 30px;
+	}
+	.navbar .nav-item i {
+		font-size: 18px;
+	}
+	.navbar .dropdown-item i {
+		font-size: 16px;
+		min-width: 22px;
+	}
+	.navbar ul.nav li.active a, .navbar ul.nav li.open > a {
+		background: transparent !important;
+	}	
+	.navbar .nav .get-started-btn {
+		min-width: 120px;
+		margin-top: 8px;
+		margin-bottom: 8px;
+	}
+	.navbar ul.nav li.open > a.get-started-btn {
+		color: #fff;
+		background: #31bfb1 !important;
+	}
+	.navbar .dropdown-menu {
+		border-radius: 1px;
+		border-color: #e5e5e5;
+		box-shadow: 0 2px 8px rgba(0,0,0,.05);
+	}
+	.navbar .nav .dropdown-menu li {
+		color: #999;
+		font-weight: normal;
+	}
+	.navbar .nav .dropdown-menu li a, .navbar .nav .dropdown-menu li a:hover, .navbar .nav .dropdown-menu li a:focus {
+		padding: 8px 20px;
+		line-height: normal;
+	}
+	.navbar .navbar-form {
+		border: none;
+	}
+	.navbar .dropdown-menu.form-wrapper {
+		width: 280px;
+		padding: 20px;
+		left: auto;
+		right: 0;
+        font-size: 14px;
+	}
+	.navbar .dropdown-menu.form-wrapper a {		
+		color: tomato;
+		padding: 0 !important;
+	}
+	.navbar .dropdown-menu.form-wrapper a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .hint-text {
+		text-align: center;
+		margin-bottom: 15px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .social-btn .btn, .navbar .form-wrapper .social-btn .btn:hover {
+		color: #fff;
+        margin: 0;
+		padding: 0 !important;
+		font-size: 13px;
+		border: none;
+		transition: all 0.4s;
+		text-align: center;
+		line-height: 34px;
+		width: 47%;
+		text-decoration: none;
+    }	
+	.navbar .social-btn .btn-primary {
+		background: #507cc0;
+	}
+	.navbar .social-btn .btn-primary:hover {
+		background: #4676bd;
+	}
+	.navbar .social-btn .btn-info {
+		background: #64ccf1;
+	}
+	.navbar .social-btn .btn-info:hover {
+		background: #4ec7ef;
+	}
+	.navbar .social-btn .btn i {
+		margin-right: 5px;
+		font-size: 16px;
+		position: relative;
+		top: 2px;
+	}
+	.navbar .form-wrapper .form-footer {
+		text-align: center;
+		padding-top: 10px;
+		font-size: 13px;
+	}
+	.navbar .form-wrapper .form-footer a:hover{
+		text-decoration: underline;
+	}
+	.navbar .form-wrapper .checkbox-inline input {
+		margin-top: 3px;
+	}
+	.or-seperator {
+        margin-top: 32px;
+		text-align: center;
+		border-top: 1px solid #e0e0e0;
+    }
+    .or-seperator b {
+		color: #666;
+        padding: 0 8px;
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+		text-align: center;
+		line-height: 26px;
+		background: #fff;
+		display: inline-block;
+		border: 1px solid #e0e0e0;
+		border-radius: 50%;
+		position: relative;
+		top: -15px;
+		z-index: 1;
+    }
+    .navbar .checkbox-inline {
+		font-size: 13px;
+	}
+	.navbar .navbar-right .dropdown-toggle::after {
+		display: none;
+	}
+	@media (min-width: 1200px){
+		.form-inline .input-group {
+			width: 300px;
+			margin-left: 30px;
+		}
+	}
+	@media (max-width: 768px){
+		.navbar .dropdown-menu.form-wrapper {
+			width: 100%;
+			padding: 10px 15px;
+			background: transparent;
+			border: none;
+		}
+		.navbar .form-inline {
+			display: block;
+		}
+		.navbar .input-group {
+			width: 100%;
+		}
+		.navbar .nav .btn-primary, .navbar .nav .btn-primary:active {
+			display: block;
+		}
+	}
+.contact-details li  {
+  margin-bottom:20px;
+}
+
+.contact-details li i {
+  color: #FF6700;
+  margin-right: 15px;
+  
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* -- Contact Map -- */
+#contact-map {
+  height:260px;
+  border-radius:4px;
+}
+.fa {
+  padding:10px;
+  font-size: 20px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.8;
+
+}
+body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+.emp-profile{
+    padding: 3%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+.profile-img{
+    text-align: center;
+}
+.profile-img img{
+    width: 70%;
+    height: 100%;
+}
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+.profile-img .file input {
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+.profile-head h5{
+    color: #333;
+}
+.profile-head h6{
+    color: #0062cc;
+}
+.profile-edit-btn{
+    border: none;
+    border-radius: 1.5rem;
+    width: 70%;
+    padding: 2%;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+}
+.proile-rating{
+    font-size: 12px;
+    color: #818182;
+    margin-top: 5%;
+}
+.proile-rating span{
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+.profile-head .nav-tabs{
+    margin-bottom:5%;
+}
+.profile-head .nav-tabs .nav-link{
+    font-weight:600;
+    border: none;
+}
+.profile-head .nav-tabs .nav-link.active{
+    border: none;
+    border-bottom:2px solid #0062cc;
+}
+.profile-work{
+    padding: 14%;
+    margin-top: -15%;
+}
+.profile-work p{
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+.profile-work a{
+    text-decoration: none;
+    color: #495057;
+    font-weight: 600;
+    font-size: 14px;
+}
+.profile-work ul{
+    list-style: none;
+}
+.profile-tab label{
+    font-weight: 600;
+}
+.profile-tab p{
+    font-weight: 600;
+    color: #0062cc;
+}
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 0px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #007b5e;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer1 {
+    background: tomato !important;
+    
+    margin-bottom: 0px
+}
+#footer {
+  
+    
+}
+#footer a {
+    color: #ffffff;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+  padding: 0px 0;
+
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+  font-size:25px;
+  -webkit-transition: .5s all ease;
+  -moz-transition: .5s all ease;
+  transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+  font-size:30px;
+  margin-top:-5px;
+}
+#footer ul.social li a{
+  color:tomato;
+}
+#footer ul.social li a:hover{
+  color:tomato;
+}
+
+
+@media (max-width:767px){
+  #footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+}
+}
+
+#hover {
+  color: rgba(188, 175, 204, 0.9);
+}
+
+
+
+div#all {
+  width: 100%;
+  height: 100%;
+}
+
+</style>
+<script type="text/javascript">
+	// Prevent dropdown menu from closing when click inside the form
+	$(document).on("click", ".navbar-right .dropdown-menu", function(e){
+		e.stopPropagation();
+	});
+</script>
+</head> 
+<body class="font-poppins">
+<nav class="navbar navbar-default navbar-expand-lg navbar-light">
+	<div class="navbar-header d-flex col">
+		<a class="navbar-brand" href="#"><b style="color: white;">SMART</b><b style="color: tomato;">SPENSE</b></a>  		
+		<button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+			<span class="navbar-toggler-icon"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+	</div>
+	<!-- Collection of nav links, forms, and other content for toggling -->
+	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
+		<ul class="nav navbar-nav">
+			<% if (!currentUser){ %>
+				<li class="nav-item"><a href="/addExp" class="nav-link" style="color: tomato;font-size: 20px">Add Expenses</a></li>
+			<% } else{ %>
+				<li class="nav-item"><a href="/addExp/<%= currentUser._id %>" class="nav-link" style="color: tomato;font-size: 20px">Add Expenses</a></li>
+			<% } %>
+			
+			<% if (!currentUser){ %>
+				<li class="nav-item"><a href="/viewTransac" class="nav-link" style="color: tomato;font-size: 20px;">View Transaction</a></li>
+				<li class="nav-item"><a href="/profile" class="nav-link" style="color: tomato;font-size: 20px;">Edit Profile</a></li>	
+			<% } else{ %>
+				<li class="nav-item"><a href="/viewTransac/<%= currentUser._id %>" class="nav-link" style="color: tomato;font-size: 20px;">View Transaction</a></li>
+				<li class="nav-item"><a href="/profile/<%= currentUser._id %>" class="nav-link" style="color: tomato;font-size: 20px;">Edit Profile</a></li>
+			<% } %>	
+			<!-- <li class="nav-item"><a href="#" class="nav-link" style="color: tomato;font-size: 20px;">Contact Us</a></li> -->
+		</ul>
+		<ul class="nav navbar-nav navbar-right ml-auto">			
+			<% if(!currentUser){ %>
+			<li class="nav-item">
+				<a data-toggle="dropdown" class="nav-link dropdown-toggle" href="#" style="color: tomato;font-size: 20px;">Login</a>
+				<ul class="dropdown-menu form-wrapper">					
+					<li>
+						<form action="/login" method="POST">
+								<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" required="required" name="username">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" required="required" name="password">
+							</div>
+							<input type="submit" class="btn btn-primary btn-block"  style="background-color: tomato" value="Login">
+							<div class="form-footer">
+								<a href="#" style="color: tomato">Forgot Your password?</a>
+							</div>
+						</form>
+					</li>
+				</ul>
+			</li>
+
+			<li class="nav-item">
+				<a href="#" data-toggle="dropdown" class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" style="color: black;background-color: tomato;font-size: 20px;">Sign up</a>
+				<ul class="dropdown-menu form-wrapper">					
+					<li>
+						<form action="/register" method="POST">
+							<p class="hint-text">Fill in this form to create your account!</p>
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="Username" required="required" name="username">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Password" required="required" name="password">
+							</div>
+							<div class="form-group">
+								<input type="password" class="form-control" placeholder="Confirm Password" required="required">
+							</div>
+							<div class="form-group">
+								<label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#" style="color: tomato">Terms &amp; Conditions</a></label>
+							</div>
+							<input type="submit" class="btn btn-primary btn-block" style="background-color: tomato" value="Sign up">
+						</form>
+					</li>
+				</ul>
+			</li>
+		<% } else{ %>	
+			<li><a href='#' style="color: tomato;font-size: 20px">Signed In As <%= currentUser.username %></a></li>
+			<li><a href='/logout' style="color: tomato;font-size: 20px">Logout</a></li>
+		<% } %>		
+			</li>
+		</ul>
+	</div>
+</nav>
+<div class="container emp-profile">
+            <form method="post">
+                <div class="row">
+                    <div class="col-md-9">
+                        <div class="profile-head">
+                                    <h5>
+                                        Team 10
+                                    </h5>
+                                    <h6>
+                                        Web Developer and Designer
+                                    </h6>
+                                    
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-4"></div>
+                    <div class="col-md-8">
+                        <div class="tab-content profile-tab" id="myTabContent">
+                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>User Id</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Jeet123</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Name</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Jeet Gujarathi</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Email</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>jeet.gujarathi@somaiya.edu</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Phone</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>82755894499</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Profession</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Web Developer and Designer</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <label>Monthly Budget</label>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <p>Rs.50,000</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                    <div class="col-md-12">
+                                        <label>Your Bio</label><br/>
+                                        <p>Your detail description</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>           
+        </div>
+ <section id="footer1">
+    <div class="container">
+      
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+          <p class="h5" style="color:black" class="te"><b>Copyright &copy KJSCE 2019 All rights Reversed.</p>
+          <p style="color: black;font-size:11.5px" class="te">Designed by <i>Team 10</i> | CSI Hackathon</p></b>
+        </div>
+        
+      </div>  
+    </div>
+  </section>
+</body>
+</html> 

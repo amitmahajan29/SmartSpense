@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/addExpense"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Add Expense" />
+        <item
+            android:id="@+id/viewExpense"
+            android:icon="@drawable/ic_menu_share"
+            android:title="View Expense" />
+        <item
+            android:id="@+id/viewCharts"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="View Chart" />
+    </group>
+
+</menu>

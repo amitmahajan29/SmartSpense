@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad"
+    tools:context="acer.example.com.smartspense.Ratings">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvFood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Food"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
+            <EditText
+                android:id="@+id/etFood"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:hint="Enter percentage for food here"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Lifestyle"
+                android:id="@+id/tvLifestyle"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etLifestyle"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:hint="Enter percentage for lifestyle here"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Food"
+                android:id="@+id/tvBill"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etBill"
+                android:layout_width="match_parent"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:hint="Enter percentage for bill here"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Medical"
+                android:id="@+id/tvMedical"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etMedical"
+                android:inputType="number"
+                android:layout_width="match_parent"
+                android:hint="Enter percentage for medical here"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Clothes"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:id="@+id/tvClothes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etClothes"
+                android:layout_width="match_parent"
+                android:hint="Enter percentage for clothes here"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Entertainment"
+                android:id="@+id/tvEntertainment"
+                android:layout_width="match_parent"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etEntertainment"
+                android:layout_width="match_parent"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:inputType="number"
+                android:hint="Enter percentage for entertainment here"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Gift"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:id="@+id/tvGift"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/etGift"
+                android:layout_width="match_parent"
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:hint="Enter percentage for gift here"
+                android:layout_height="wrap_content" />
+            <Button
+                android:text="Save Ratings"
+                android:id="@+id/saveRatings"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
