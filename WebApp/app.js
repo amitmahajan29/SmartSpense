@@ -5,7 +5,9 @@ var express = require("express"),
 	passport	= require("passport"),
 	LocalStrategy = require("passport-local"),
 	User 	= require('./models/user'),
-	Expense = require('./models/expense');
+	Expense = require('./models/expense'),
+	nodemailer = require('nodemailer'),
+	smtpTransport = require('nodemailer-smtp-transport');
 
 var budget;
 var diff;
@@ -193,6 +195,7 @@ app.post('/addExpense', function(req, res){
 		else{
 			// console.log(newData);
 			var budget = obj.budget;
+			var date1 = Date.parse(obj.paymentDate);
 			User.findById('5c5682401aae631d6ce3ea04').populate("expenses").exec(function(err, foundUser){
 				if(err){
 					console.log(err);
@@ -202,12 +205,13 @@ app.post('/addExpense', function(req, res){
 					foundUser.save();
 					
 					var total = 0;
-					foundUser.expenses.forEach(function(expense){	
+					foundUser.expenses.forEach(function(expense){
 						total+=expense.price;
 					});
 					diff = parseInt(budget) - total;
 					console.log(diff);
 					// res.send("You still haven't outdone yourself " + diff);
+					// var date1 = obj.paymentDate;
 				}
 			});
 			res.status(200).json({
